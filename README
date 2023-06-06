@@ -1,0 +1,15 @@
+## Modelos
+
+The accuracy of the models can be seen in the following image:
+
+![Accuracy.png](./output.png)
+
+## Server
+
+To run the server, just run
+
+    $ python3 server.py
+
+![Frontend](./Servidor.png)
+
+The dataset Arxiv is from Kaggle: https://www.kaggle.com/Cornell-University/arxiv

@@ -9,7 +9,7 @@ app = Flask(__name__)
 # Load the pre-trained model
 model_naive_bayes = joblib.load("nb_classifier.pkl")
 model_cnn = load_model("./cnn_model")
-model_cnn_bert = load_model("./cnn_bert_model")
+# model_cnn_bert = load_model("./cnn_bert_model")
 label_encoder = joblib.load('./label_encoder.joblib')
 
 @app.route('/', methods=['GET', 'POST'])
