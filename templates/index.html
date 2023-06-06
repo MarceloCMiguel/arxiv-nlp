@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scientific Journal Recommendation</title>
+    <style>
+      .column {
+        flex: 33.33%;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scientific Journal Recommendation</h1>
+    <div style="display: flex;">
+      <div class="column">
+        <h2> Naive Bayes</h2>
+        <form action="/" method="post">
+          <label for="title">Title:</label><br />
+          <input type="text" id="title" name="title" required /><br /><br />
+
+          <label for="abstract">Abstract:</label><br />
+          <textarea id="abstract" name="abstract" rows="5" required></textarea
+          ><br /><br />
+          <input type="hidden" name="model" value="naive_bayes" />
+          <input type="submit" value="Recommend Journal" />
+        </form>
+
+        <p><strong>Response:</strong> {{ naive_bayes_response }}</p>
+      </div>
+
+      <div class="column">
+        <form action="/" method="post">
+            <label for="title">Title:</label><br />
+            <input type="text" id="title" name="title" required /><br /><br />
+  
+            <label for="abstract">Abstract:</label><br />
+            <textarea id="abstract" name="abstract" rows="5" required></textarea
+            ><br /><br />
+  
+            <input type="submit" value="Recommend Journal" />
+            <input type="hidden" name="model" value="cnn" />
+          </form>
+  
+          <p><strong>Response:</strong> {{ cnn_response }}</p>
+      </div>
+    </div>
+  </body>
+</html>
